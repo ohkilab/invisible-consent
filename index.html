@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="LabellessFace: Fair Metric Learning for Face Recognition without
+  Attribute Labels">
+  <meta property="og:title" content="LabellessFace: Fair Metric Learning for Face Recognition without
+  Attribute Labels" />
+  <meta property="og:description" content="LabellessFace: Fair Metric Learning for Face Recognition without
+  Attribute Labels" />
+  <meta property="og:url" content="https://ohkilab.github.io/invisible-consent/" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta name="keywords" content="Biometrics Fairness Face Recognition">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>LabellessFace</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+    integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
+    integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg"
+    crossorigin="anonymous"></script>
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Invisible Consent: Browser Automation by LLM Agents is Not
+              Privacy-aware
+              Attribute Labels</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                Ryota Saito<sup>1</sup>,</span>
+              <span class="author-block">
+                Takuya Kataiwa<sup>1 </sup>,</span>
+              <span class="author-block">
+                Minato Takashima<sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://sec.inf.shizuoka.ac.jp" target="_blank">Tetsushi Ohki</a><sup>1, 2</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <sup>1</sup><span class="author-block">Shizuoka University,
+                <sup>2</sup>RIKEN AIP</span>
+              <br>ACM CHI Conference on Human Factors in Computing Systems(CHI 2026) Posters</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="xxxx" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Supplementary PDF link -->
+                <!-- <span class="link-block">
+                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary</span>
+                  </a>
+                </span> -->
+
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2409.09274" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Demographic bias is one of the major challenges for face recognition systems. The majority of existing
+              studies on demographic biases are heavily dependent on specific demographic groups or demographic
+              classifier, making it difficult to address performance for unrecognised groups. This paper introduces
+              “LabellessFace," a novel framework that improves demographic bias in face recognition without requiring
+              demographic group labeling typically required for fairness considerations. We propose a novel fairness
+              enhancement metric called the class favoritism level, which assesses the extent of favoritism towards
+              specific classes across the dataset. Leveraging this metric, we introduce the fair class margin penalty,
+              an extension of existing marginbased metric learning. This method dynamically adjusts learning parameters
+              based on class favoritism levels, promoting fairness across all attributes. By treating each class as an
+              individual in facial recognition systems, we facilitate learning that minimizes biases in authentication
+              accuracy among individuals. Comprehensive experiments have demonstrated that our proposed method is
+              effective for enhancing fairness while maintaining authentication accuracy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <section class="section hero is-small" id="Content1">
+    <div class="hero-body">
+      <div class="container is-max-desktop content">
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <div class="content">
+              <h2 class="title is-3">LabellessFace Framework</h2>
+              <div class="level-set has-text-justified">
+                <p>
+                  <b>LabellessFace</b> framework is based on existing softmax-based metric learning. In addition to
+                  softmax-based metric learning, it dynamically sets different
+                  margins for each class based on <b>class favoritism level</b> while progressing the training through
+                  the
+                  fair class margin penalty process, and updates the class favoritism level at the end of each epoch.
+                  Here,
+                  the class favoritism level is determined based on how much the recognition accuracy for each
+                  individual
+                  deviates from the overall average using the training samples.
+                </p>
+              </div>
+              <center>
+                <img src="static/images/overview_proposed.svg" alt="Overview of LabellessFace" class="center-image">
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="section hero is-small is-light" id="Content2">
+    <div class="hero-body">
+      <div class="container is-max-desktop content">
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <div class="content">
+              <h2 class="title is-3">Fair Class Margin Penalty</h2>
+              <div class="level-set has-text-justified">
+                <p>
+                  In this proposal, to minimize the bias in individual authentication accuracy, a margin coefficient
+                  $d_c$
+                  is added to the basic ArcFace loss function to minimize the bias in individual authentication
+                  accuracy.
+                  In this case, $d_c$ takes different values for each class and is determined at the end of each epoch
+                  based on the class favoritism level $f_c$, which indicates the extent to which each class $c \in
+                  \mathcal{C}$ is favored among all classes.
+                </p>
+              </div>
+              <center>
+                <img src="static/images/equations.svg" width="480" alt="Fair Class Margin Penalty" class="center-image">
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="section hero is-small" id="Content3">
+    <div class="hero-body">
+      <div class="container is-max-desktop content">
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <div class="content">
+              <h2 class="title is-3">Class Favoritism Level Calculation</h2>
+              <div class="level-set has-text-justified">
+                <p>
+                  The class favoritism level $f_c$ for class $c$ is calculated at the end of each epoch using the
+                  training
+                  data. Classes identified with relatively high confidence are calculated with a higher favoritism
+                  level,
+                  while those with lower confidence receive a lower level, which is then reflected in the calculation of
+                  the coefficient $d_c$ of fair class margin penalty for the next epoch.
+                </p>
+                <center>
+                  <img src="static/images/overview_cfl.svg" alt="Class Favoritism Level Calculation"
+                    class="center-image">
+                </center>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="section hero is-small is-light" id="Content4">
+    <div class="hero-body">
+      <div class="container is-max-desktop content">
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <div class="content">
+              <h2 class="title is-3">Evaluation</h2>
+              <div class="level-set has-text-justified">
+                <p>
+                  For model training, the BUPT-Balancedface dataset, which has an equal proportion of races,
+                  was used. BUPT-Balancedface contains 7,000 classes of four races: African, Asian, Caucasian, and
+                  Indian,
+                  with racial labeling provided for each data point. In the evaluation, the Labeled Faces in the Wild
+                  (LFW) and Racial Faces in the Wild (RFW) datasets were used. We utilized ResNet34 as a face
+                  recognition
+                  model architecture.
+                </p>
+                <center>
+                  <p style="width:480px; min-width:75%; text-align:left; margin-bottom:0; font-size:0.8em">
+                    Table: The performance and fairness evaluation results evaluated on LFW dataset. STD, Gini, SER were
+                    assessed when users were divided according to LFW 26 attributes.</p>
+                  <img src="static/images/result.svg" style="width:480px; min-width:75%" alt="result"
+                    class="center-image">
+                </center>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Slide -->
+  <section class="section hero is-small" id="slide">
+    <div class="hero-body">
+      <div class="container is-max-desktop content">
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <div class="content">
+              <h2 class="title is-3">Slide</h2>
+              <div class="level-set has-text-justified">
+                <center>
+                  <iframe
+                    src="https://www.slideshare.net/slideshow/embed_code/key/dQWlyq5JAw9F0h?hostedIn=slideshare&page=upload"
+                    width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no">
+                  </iframe>
+                </center>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End Slide -->
+
+  <!-- Paper poster -->
+  <section class="section hero is-small is-light" id="Content5">
+    <div class="hero-body">
+      <div class="container is-max-desktop content">
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <div class="content">
+              <h2 class="title is-3">Poster</h2>
+              <div class="level-set has-text-justified">
+                <iframe src="static/pdfs/poster.pdf" width="100%" height="550">
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End paper poster -->
+
+  <!--BibTex citation -->
+  <section class="section hero is-small" id="Citation">
+    <div class="hero-body">
+      <div class="container is-max-desktop content">
+        <h2 class="title">Citation</h2>
+        <pre><code>
+        @inproceedings{ohki2024labellessface,
+          title={LabellessFace: Fair Metric Learning for Face Recognition without Attribute Labels},
+          author={Ohki, Tetsushi and Sato, Yuya and Nishigaki, Masakatsu and Ito, Koichi},
+          booktitle={IEEE International Joint Conference on Biometrics (IJCB 2024)},
+          year={2024}
+        }
+      </code></pre>
+      </div>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+  <!--Acknowledgement -->
+  <section class="section hero is-small is-light" id="Acknowledgement">
+    <div class="hero-body">
+      <div class="container is-max-desktop content">
+        <h2 class="title">Acknowledgement</h2>
+        <p>
+          This work was supported in part by JSPS KAKENHI JP 23K28085, and JST Moonshot R&amp;D Grant Number JPMJMS2215.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!--End Acknowledgement -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+  <!-- KaTeX Autorender -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: "\\[", right: "\\]", display: true },
+          { left: "$", right: "$", display: false }
+        ]
+      });
+    });
+  </script>
+
+</body>
+
+</html>
